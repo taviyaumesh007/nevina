@@ -2,17 +2,13 @@ import React, { useState } from 'react'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
-import Scheduler from 'devextreme-react/scheduler';
-import CustomStore from 'devextreme/data/custom_store';
 import CalandarTable from './CalandarTable';
-import { Button, ButtonGroup } from '@mui/material';
 import MusicPlaylist from './MusicPlaylist ';
 
 const Calendar = () => {
   const [currentDates, setCurrentDates] = useState(new Date());
   const [activeView, setActiveView] = useState("Day");
   const currentDate = new Date(2017, 4, 25);
-  const views = ['day', 'workWeek', 'month'];
   const activities = [
     ['Listen', 'Learn', 'Work-Out', 'Study'],
     ['Practice', 'Other', 'Work-Out', 'Study'],
@@ -48,8 +44,8 @@ const Calendar = () => {
     <div>
 
       <div className="calendar-container">
-        <div className="calendar" style={{ display: "flex" }} >
-          <div className="calendar-header">
+        <div className="calendar" style={{ display: "flex",flexWrap:'wrap' }} >
+          <div style={{width:'76%'}}>
 
             <div style={{ width: '100%' }}>
               <div className="calendar-header">

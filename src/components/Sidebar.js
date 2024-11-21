@@ -69,7 +69,7 @@ const Sidebar = () => {
 };
 
   return (
-      <aside className="sidebar">
+      <aside className="sidebar hidden sm:ml-6 sm:block">
              <div className="menu">
             {menuItems.map((item, index) => (
                 <div key={index} className="menu-section">

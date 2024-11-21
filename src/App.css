@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 .App {
   text-align: center;
@@ -1063,6 +1067,38 @@ body, html {
   border-right: 1px solid #e5e5e5;
   height: 1460px;
 }
+.sidebar {
+  width: 200px;
+  padding: 65px 15px 0 15px;
+  background-color: #fff;
+  border-right: 1px solid #e5e5e5;
+  font-family: 'Arial', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  .toggle-button {
+    display: block;
+  }
+  .left-section {
+    display: none;
+  }
+}
+
+.sidebar.open {
+  transform: translateX(0); 
+}
+
+.toggle-button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 1000;
+}
 
 .menu-item {
   display: block;
@@ -1154,13 +1190,7 @@ body, html {
   margin-top: 20px;
 }
 
-.sidebar {
-  width: 200px;
-  padding: 65px 15px 0 15px;
-  background-color: #fff;
-  border-right: 1px solid #e5e5e5;
-  font-family: 'Arial', sans-serif;
-}
+
 
 .menu-item {
   display: flex;
@@ -1214,10 +1244,10 @@ body, html {
   border-bottom: 1px solid #eaeaea;
 }
 
-.left-section {
+/* .left-section {
   display: flex;
   align-items: center;
-}
+} */
 
 .back-button {
   color: #bfbfbf;
@@ -1248,6 +1278,7 @@ body, html {
   text-decoration: none;
   color: #000;
   font-size: 14px;
+  margin: 0 10px;
 }
 
 .get-app {
